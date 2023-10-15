@@ -1,0 +1,83 @@
+body {
+  background-color: #f5f5f5; 
+  margin: 0;
+  padding: 0;
+  font-family: 'Perpetua', serif;
+  font-size: 20px;
+}
+.a4-sheet {
+  width: 21cm;
+  height: 29.7cm; 
+  background-color: #eae7f8;
+  margin: 0 auto;
+  justify-content: center; 
+  align-items: center; 
+}
+.navb 
+    {
+      display: flex;
+      justify-content: center;
+    background:black;
+    padding: 20px; 
+}
+.navb ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0;
+}
+.navb li {
+    display: inline; 
+    margin-right: 15px;
+}
+      
+.navb a {
+    text-decoration: none; 
+    color:rgb(247, 245, 245) ;
+    font-weight: bold;
+    padding: 20px 20px; 
+}
+.navb a:hover {
+    color: #a392ef;
+}
+      
+    table, th, td{
+        border: 1px solid;
+        border-collapse: collapse;
+        text-align: center;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    th{
+        background-color: #a392ef;
+        color: #000;
+    }
+    .flex-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .skills {
+      flex: 1;
+      padding-left: 70px;
+      padding-right: 50px;
+    }
+    .int {
+      flex: 1; 
+      padding-left: 30px;
+    }
+    .name{
+        text-align: center;
+    }
+    .aim{
+        text-align: center;
+    }
+    .flex-container> div .int{
+        align-content: flex-start;
+    }
+.abt, .edu, .proj{
+  padding-left: 70px;
+  padding-right: 50px;
+}
