@@ -1,0 +1,55 @@
+<body>
+  <div class="navbar">
+    <div class="navbar-right">
+      <h1>Music Player</h1>
+    </div>
+    <div class="navbar-left">
+      <div class="about-link">
+        <a href="#">About</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <ul>
+      <li *ngFor="let file of files" (click)="openFile(file.url, file.name)">
+        {{ file.name }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <div class="button-container">
+      <button (click)="play()" class="player-button">Play</button>
+      <button (click)="pause()" class="player-button">Pause</button>
+      <button (click)="stop()" class="player-button">Stop</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2 class="song-name">{{ currentSong.name }}</h2>
+    <div class="time-controls">
+      <span>{{ currentTime }}</span>
+      <input
+        type="range"
+        min="0"
+        max="{{ duration }}"
+        [value]="seek"
+        (input)="setSeekTo($event)"
+      />
+      <span>{{ duration }}</span>
+    </div>
+
+    <div class="volume-controls">
+      <span>Volume</span>
+      <input
+        type="range"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.5"
+        (input)="setVolume($event)"
+      />
+    </div>
+  </div>
+</body>
